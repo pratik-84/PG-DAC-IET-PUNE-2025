@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>my project</h1>
+
+    <iframe src="index.html" frameborder="0"></iframe>
+
+    <div>
+        <form>
+            <label> enter ur name</label>
+            <input type="text" id="name">
+            <span id="err"></span>
+            <button type="button">submoit</button>
+        </form>
+        <p id="msg"></p>
+    </div>
+    <script>
+        document.querySelector("button").addEventListener('click',()=>{
+            const data=document.querySelector("#name").value.trim();
+            if(data==''){
+                document.querySelector("#err").innerHTML="field mandatory";
+            }
+        })
+    </script>
+</body>
+</html>
+

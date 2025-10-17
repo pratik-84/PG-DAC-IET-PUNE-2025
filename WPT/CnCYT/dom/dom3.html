@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 3</title>
+</head>
+<body>
+    <div>
+        <ul class ="ulclass">
+            <li>python</li>
+        </ul>
+    </div>
+</body>
+<script>
+    //add
+    function addlang(lang){
+        const l2=document.createElement('li')//'li' were taking list input
+        l2.innerHTML=`${lang}`
+        document.querySelector(".ulclass").appendChild(l2);
+    }
+    addlang('javascript');
+    addlang('java');
+    //add
+    function addlang2(lang2){
+      const l1=  document.createElement('li');
+        l1.appendChild(document.createTextNode(lang2))
+        document.querySelector('.ulclass').appendChild(l1)
+    }
+    addlang2('c++');
+    addlang2('c#');//same work this is more optimized way
+
+    //edit
+    const ele=document.querySelector('li:nth-child(2)');
+    //cng.innerText="html";
+    const newele=document.createElement('li');
+    newele.textContent="html";//can write .innerHTML as well
+    ele.replaceWith(newele);
+
+    //edit
+    const first=document.querySelector("li:first-child");
+    first.outerHTML='<li>css</li>'//it will replace whole element
+
+    //remove
+    // document.querySelector('li:last-child').remove();
+   const del= document.querySelector('li:last-child')
+   del.remove();
+
+
+    
+
+
+</script>
+</html>

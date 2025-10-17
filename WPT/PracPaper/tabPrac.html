@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TablePrac
+    </title>
+</head>
+<body>
+    <label for="number" >Enter a number</label>
+    <input type="text" id="number" required>
+    <button onclick="calculate()">Calculate</button>
+    <div id="result"> </div>
+</body>
+
+<script>
+    function calculate(){
+
+      var inputNo=  document.getElementById('number').value;
+        var num= parseInt(inputNo);
+        var table = `<table>
+            <tr>
+                <th><no</th>
+                <th>multiplication</th>
+                <th>result</th> 
+            </tr> `;  
+            
+            for(let i=1;i<=10;i++){
+                // table+=`<tr> <td>` + i +` </td> <td>` + (num*i)+ `</td> </tr>`; 
+                table+= `<tr>
+                    <td> ${num}</td>
+                    <td> ${  i }</td>
+                    <td> ${num*i}</td>`
+
+            }
+            table +=`</table>`;
+            document.getElementById('result').innerHTML=table;
+    }
+</script>
+</html>

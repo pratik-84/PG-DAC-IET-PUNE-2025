@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>to change color after start then stop when click stop</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+</body>
+<script>
+    const str=document.getElementById('start')
+    document.getElementById('start').addEventListener('click',function(){
+        setInterval(function(){
+            document.body.style.backgroundColor="red , blue"
+            
+
+        },1000)
+    })
+</script>
+</html>

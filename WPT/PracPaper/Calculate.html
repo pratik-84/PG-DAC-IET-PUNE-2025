@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="Calculate.html">Calculate</a></h1>
+    
+        <label for="number">Enter a number:</label>
+        <input type="text" id="number" required>
+        <button type="button" onclick="calculate()">Calculate Table</button>
+    
+    <div id="result"></div>
+
+    <script>
+        function calculate() {
+            var numInput = document.getElementById('number').value.trim();
+            if (numInput === '') {
+                alert('Please enter a number.');
+                return;
+            }
+            if (isNaN(numInput)) {
+                alert('Please enter a valid number.');
+                return;
+            }
+            var num = parseInt(numInput);
+            var table = '<table><tr><th>Multiplier</th><th>Result</th></tr>';
+            for (var i = 1; i <= 10; i++) {
+                table += '<tr><td>' + i + '</td><td>' + (num * i) + '</td></tr>';
+            }
+            table += '</table>';
+            document.getElementById('result').innerHTML = table;
+        }
+    </script>
+</body>
+</html>

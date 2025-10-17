@@ -1,0 +1,49 @@
+<html>
+
+<body>
+    <h1>DATA MANAGEMENT</h1>
+    <div id="div1">
+    <label for="nameInput">enter name</label>
+    <input type="text" placeholder="enter username" id="nameInput">
+
+    <label for="emailInput"> enter email</label>
+    <input type="text" id="emailInput" placeholder="entert password">
+
+    <label for="phonenoInput">enter phone number</label>
+    <input type="text" id="phonenoInput" placeholder="enter phone number">
+
+    <label for="addressinput">enter the address</label>
+    <textarea type="text" id="addressinput" placeholder="enter address"></textarea>
+    <br>
+    <button onclick="addData()">ADD</button>
+</div>
+<table id="outputtable">
+    <tr>
+        <th>name</th>
+        <th>email</th>
+        <th>password</th>
+        <th>address</th>
+    </tr>
+</table>
+    <script>
+        function addData(){
+           let name= document.getElementById("nameInput").value.trim();
+           let email=document.getElementById("emailInput").value.trim();
+           let phoneno=document.getElementById("phonenoInput").value.trim();
+           let address=document.getElementById("addressinput").value.trim();
+           let table=document.getElementById("outputtable");
+           let newRow=table.insertRow(table.rows.length);
+
+            newRow.insertCell(0).innerHTML=name;
+            newRow.insertCell(1).innerHTML=email;
+            newRow.insertCell(2).innerHTML=phoneno;
+            newRow.insertCell(3).innerHTML=address;
+
+
+        }
+
+    </script>
+</body>
+
+
+</html>

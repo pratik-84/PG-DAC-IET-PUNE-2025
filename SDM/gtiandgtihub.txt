@@ -1,0 +1,40 @@
+git --version//for version chek
+pwd / to check working derictory
+~//shows that were in root directory of the system
+git config --global user.name "username written in git hub"
+git config --globaluser.email "emailwhich u have logged in with ur git hub"
+git config --list//to show thw name and email (stores credentials)
+git clone testrepo(name of repo link ) // will create a clone in owr system(laptop) too 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//when we have created a new directory and to link both of the directory (the new one as well as the old one) the following steps
+
+Quick setup — if you’ve done this kind of thing before
+or	
+https://github.com/pratik-84/localrepo.git
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+
+…or create a new repository on the command line
+echo "# localrepo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/pratik-84/localrepo.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/pratik-84/localrepo.git
+git branch -M main
+git push -u origin main

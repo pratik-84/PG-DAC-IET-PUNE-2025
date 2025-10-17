@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #display {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Information Form</h1>
+    <form id="studentForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required>
+
+        <label for="marks">Marks:</label>
+        <input type="number" id="marks" required>
+
+        <button type="button" onclick="addStudentData()">Add Student Data</button>
+    </form>
+
+    <div id="display"></div>
+
+    <script>
+        let stud = {
+            firstName: "John",
+            lastname: "",
+            marks: 48
+        };
+
+        function addStudentData() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const marks = parseInt(document.getElementById('marks').value);
+
+            if (firstName && lastName && !isNaN(marks)) {
+                stud.firstName = firstName;
+                stud.lastname = lastName;
+                stud.marks = marks;
+
+                displayStudentData();
+            } else {
+                alert('Please fill in all fields correctly.');
+            }
+        }
+
+        function displayStudentData() {
+            const displayDiv = document.getElementById('display');
+            displayDiv.innerHTML = `
+                <h2>Student Object Data:</h2>
+                <pre>${JSON.stringify(stud, null, 2)}</pre>
+            `;
+        }
+
+        // Display initial data
+        displayStudentData();
+    </script>
+</body>
+</html>

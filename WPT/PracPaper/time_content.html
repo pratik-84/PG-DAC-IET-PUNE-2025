@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="dateTimeDisplay"></div>
+    <script>
+        function updateDateTime() {
+            const now = new Date( );
+            document.getElementById('dateTimeDisplay').textContent = now.toLocaleTimeString('en-US');
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+</html>

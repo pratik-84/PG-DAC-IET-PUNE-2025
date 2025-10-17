@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom learning</title>
+
+</head>
+<body style="background-color: aqua; color:red">
+    <div class ="parent">
+        <!-- node list is 9 and children is 4 -->
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thrusday</div>
+
+    </div>
+
+
+
+</body>
+<script>
+    const parent =document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[0]);
+    // for(let i=0;i<parent.children.length;i++){
+    //     console.log(parent.children[i].innerHTML);
+    // }
+
+    parent.children[1].style.padding='5px'
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+    const day=document.querySelector('.day')
+    console.log(day);
+    console.log(day.parentElement);
+    console.log(day.nextElementSibling);
+    console.log("nodes :", parent.childNodes);
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- inner text- visible
+textcontent-gives all the content 
+innerhtml- gibes everything style and all
+query selector - to select the specific class by # and id by . or by tag
+and only select one element
+query selector all - to select all the elements
+get element by id - to select the element by id
+get element by class name - to select the element by class name
+-->

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event 1</title>
+</head>
+<body>
+    <div>
+        <ul id ="buttons">
+            <li><button type="click" id ="1"> BUT1</button></li>
+            <li><button type="click" id ="2"> BUT2</button></li>
+            <li><button type="click" id ="3"> BUT3</button></li>
+            <li><button type="click" id ="4"> BUT4</button></li>
+            <li><button type="click" id ="5"> BUT5</button></li>
+            <li><button type="click" id ="6"> BUT6</button></li>
+            <li><button type="click" id ="7"> BUT7</button></li>
+            <li><button type="click" id ="8"> BUT8</button></li>
+            <li><button type="click" id ="9"> BUT9</button></li>
+        </ul>
+
+    </div>
+</body>
+<script>
+    document.getElementById("1").onclick=function(){//when we write onclick we need to write function
+        alert("button 1 clicked")
+    }// not optimal approach
+    document.getElementById("2").addEventListener('click', function (){
+        alert("button 2 clicked")
+    }) //best aapproach 
+    document.getElementById("3").addEventListener('click', function (e){
+        console.log(e.target.innerHTML);
+    }) 
+    document.getElementById("4").addEventListener('click', function(e){
+        e.preventDefault()//to prevent default action
+        console.log(("but 4 clicked"));
+    })
+    document.querySelector('#buttons').addEventListener('click',function (e){
+
+        console.log(e.target.parentNode);
+        let remove=e.target.parentNode;
+        remove.remove();//to remove
+    })
+     
+    
+</script>
+</html>

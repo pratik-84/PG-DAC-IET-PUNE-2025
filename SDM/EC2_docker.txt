@@ -1,0 +1,42 @@
+go to aws create ec2
+
+sudo yum install docker
+docker version
+docker images
+
+create docker id 
+
+docker login 	
+sudo service docker start // to start docker
+sudo docker images // to check for images ,currently no images
+sudo docker pull redis //to add redis
+sudo docker pull ubuntu // to ad  ubuntu
+sudo docker images //to show images
+sudo docker rmi IMAGE ID// to remove images
+
+
+touch dockerfile.sh
+nano dockerfile.sh
+
+FROM ubuntu
+RUN apt-get update
+Maintainer YourNaMEe
+
+cat dockerfile  // to show the file content
+
+sudo docker build -f dockerfile.sh -t dockerfile:1.0 .
+                       yourfile       image_name
+
+sudo docker images //to show images
+
+to delete jabardasti
+
+docker ps -a//container id bhi dekhte
+docker rm containerID
+docker stop//galat hai
+docker rmi redis:latest/to delete jabardasti
+
+
+
+
+

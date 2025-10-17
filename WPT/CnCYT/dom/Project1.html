@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoMProejct1</title>
+</head>
+<body>
+    <h1>color Changing</h1>
+    <button class="but">grey</button>
+    <button class="but">blue</button>
+    <button class="but">red</button>
+    <button class="but">purple</button>
+</body>
+<script>
+    // const butt=document.querySelectorAll('.but');
+    // console.log(butt);
+    // butt.forEach((but) =>{
+    //     but.addEventListener('click',()=>{
+    //         document.body.style.backgroundColor=but.innerText;
+    //     })
+    // })
+
+
+    // const btns=document.querySelectorAll('.but');
+    // //console.log(btns);
+    // btns.forEach((btn)=>{
+    //     btn.addEventListener('click',()=>{
+    //         document.body.style.backgroundColor=btn.innerText;
+    //     })
+    // })  
+
+
+
+    const button=document.querySelectorAll('.but')
+
+    button.forEach( (but) => {
+        but.addEventListener('click',() =>{
+             document.body.style.backgroundColor=but.innerText;
+             but.style.backgroundColor=but.innerText;
+            //  but.style.color=but.innerText;
+        })
+    })
+
+
+
+
+
+</script>
+</html>
