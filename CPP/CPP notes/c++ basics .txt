@@ -1,0 +1,111 @@
+*********parameter and argument*****************
+ex  // 'x' and 'y' are parameters
+int add(int x, int y) {
+    return x + y;
+}
+
+int main() {
+    int a = 5;
+    int b = 3;
+
+    // 'a' and 'b' are arguments
+    int sum = add(a, b); 
+
+    std::cout << "The sum is: " << sum << std::endl; // Output: The sum is: 8
+
+A simple analogy to remember the difference is a form:
+The empty fields on the form, with labels like "Name" and "Email," are the parameters.
+ They define what kind of information is required.
+The actual information you write into the fields, such as "John Doe" or "john.doe@email.com," are the arguments.
+ They are the concrete data provided to fill the form. 
+
+
+**********default arguments*****************
+Key rules for default arguments
+
+Specify in declaration: Default arguments should be specified in the function prototype (declaration), 
+not in the function definition.
+
+Right-to-left rule: When assigning default values, you must start from the rightmost parameter and move left.
+ If a parameter has a default value, all subsequent parameters to its right must also have default values.
+
+Overriding: An explicitly passed argument always overrides the default value for its corresponding parameter.
+
+Reduced Overloading: They can reduce the need for function overloading,
+ as a single function declaration can handle multiple call scenarios.
+
+******************function prototype and function definition *********************
+Think of it like building a house:
+The function prototype is the blueprint. It describes what the house looks like from the outside—its size, number of doors, etc.—but doesn't contain any interior details.
+The function definition is the actual construction of the house. It contains all the interior details, including the specific furniture, wiring, and plumbing. 
+Function Prototype
+	return_type function_name(parameter_list)
+
+Function Definition
+return_type function_name(parameter_list) { ... }
+
+Function prototypes are typically placed at the top of a file or in a header file before function calls. Definitions can be placed before or after main() in the same file or in a separate file. Prototypes enable modular programming and separate compilation, allowing a function to be called before its definition. 
+
+#include <iostream>
+
+// --- Function Prototype ---
+int add(int a, int b); 
+
+int main() {
+    int sum = add(5, 3); 
+    std::cout << "The sum is: " << sum << std::endl;
+    return 0;
+}
+
+// --- Function Definition ---
+int add(int a, int b) {
+    return a + b;
+}
+
+
+
+*******************scope resolution operator.(::)***********************************
+***Defining a member function outside of a class: -Declare a function inside a class and define it outside using the scope resolution operator.
+
+#include <iostream>
+
+class MyClass {
+public:
+    void my_function(); // Declaration inside the class
+};
+
+// Definition outside the class using ::
+void MyClass::my_function() {
+    std::cout << "Hello from MyClass!" << std::endl;
+}
+
+int main() {
+    MyClass obj;
+    obj.my_function();
+    return 0;
+}
+
+***Accessing static class members: Access static members using the class name and :: without creating an object.
+#include <iostream>
+
+class MyClass {
+public:
+    static int static_member; // Static member
+};
+
+int MyClass::static_member = 42; // Define and initialize static member
+
+int main() {
+    std::cout << "Static member value: " << MyClass::static_member << std::endl;
+    return 0;
+}
+
+****Accessing identifiers within a namespace: Use :: to specify which namespace an identifier belongs to. This prevents naming conflicts.
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl; // Explicitly use the std namespace
+    return 0;
+}
+
+

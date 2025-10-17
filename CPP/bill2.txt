@@ -1,0 +1,50 @@
+Bill Id : 8
+Customer Name : Aman
+---------------------
+Purchased Items
+-------------------------
+Item Id : 1243
+Item Name : mobile
+Item Price : 10000
+Items in Stock : 4
+Items Quantity : 1
+-------------------------
+-------------------------
+Item Id : 4235
+Item Name : camera
+Item Price : 50000
+Items in Stock : 6
+Items Quantity : 1
+-------------------------
+-------------------------
+Item Id : 4643
+Item Name : cpu
+Item Price : 40000
+Items in Stock : 8
+Items Quantity : 2
+-------------------------
+Bill Id : 8
+Customer Name : Aman
+---------------------
+Purchased Items
+-------------------------
+Item Id : 2
+Item Name : 3
+Item Price : 4
+Items in Stock : 5
+Items Quantity : 3
+-------------------------
+-------------------------
+Item Id : 5
+Item Name : 3
+Item Price : 5
+Items in Stock : 3
+Items Quantity : 5
+-------------------------
+-------------------------
+Item Id : 3
+Item Name : 5
+Item Price : 5
+Items in Stock : 3
+Items Quantity : 5
+-------------------------
