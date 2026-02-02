@@ -1,0 +1,4 @@
+INDEX VERSION 1.132+D:\pratikdsa\day1\.metadata\.plugins\org.eclipse.jdt.core
+2796779657.index
+2111296294.index
+1865797976.index
